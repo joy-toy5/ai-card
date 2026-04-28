@@ -8,9 +8,6 @@
 ├── LICENSE
 ├── README.md
 ├── aicard.js
-├── assets
-│   └── tasks
-│       └── todo.md
 ├── package-lock.json
 ├── index.html
 ├── package.json
@@ -38,7 +35,6 @@
 - `vite.config.js`: Vite 与 React、Tailwind 插件配置。
 - `package.json`: 依赖、脚本与开源元数据定义。
 - `package-lock.json`: 当前依赖解析结果，保证安装结果可复现。
-- `assets/tasks/todo.md`: 当前任务执行与验证记录。
 
 ## 依赖边界
 

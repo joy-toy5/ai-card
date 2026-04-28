@@ -59,9 +59,6 @@ npm run build
 ├── LICENSE
 ├── README.md
 ├── aicard.js
-├── assets
-│   └── tasks
-│       └── todo.md
 ├── index.html
 ├── package.json
 ├── package-lock.json
