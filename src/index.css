@@ -1,0 +1,135 @@
+@import "tailwindcss";
+
+:root {
+  color: #ffffff;
+  background: #050505;
+  font-family: "JetBrains Mono", "Fira Code", "Source Code Pro", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.08), transparent 35%),
+    linear-gradient(180deg, #111111 0%, #050505 50%, #000000 100%);
+}
+
+button,
+img {
+  display: block;
+}
+/* --- 赛博朋克背景系统 --- */
+
+/* 1. 根舞台：只负责底色与层叠上下文 */
+.bg-cyber-abyss {
+  position: relative;
+  isolation: isolate;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.12), transparent 42%),
+    linear-gradient(180deg, #111111 0%, #050505 50%, #000000 100%);
+}
+
+/* 2. 独立背景层：确保特效永远在内容后面 */
+.cyber-backdrop {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    radial-gradient(circle at 14% 58%, rgba(20, 255, 236, 0.22), transparent 34%),
+    radial-gradient(circle at 84% 24%, rgba(255, 0, 255, 0.2), transparent 30%),
+    radial-gradient(circle at 50% 118%, rgba(0, 153, 255, 0.34), transparent 50%);
+  background-size: 120% 120%, 116% 116%, 140% 140%;
+  background-position: 14% 58%, 84% 24%, 50% 118%;
+  animation: glowPulse 8s ease-in-out infinite alternate;
+  will-change: background-size, background-position, filter, opacity;
+}
+
+.cyber-backdrop::before,
+.cyber-backdrop::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* 3. 透视网格底盘 */
+.cyber-backdrop::before {
+  inset: auto -34% -12% -34%;
+  height: 76%;
+  background-image:
+    linear-gradient(rgba(98, 234, 255, 0.28) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(98, 234, 255, 0.28) 1px, transparent 1px);
+  background-size: 64px 64px;
+  transform-origin: center bottom;
+  transform: perspective(1250px) rotateX(72deg) scaleX(1.45);
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 18%, rgba(0, 0, 0, 0.96) 34%, rgba(0, 0, 0, 0.55) 58%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1) 18%, rgba(0, 0, 0, 0.96) 34%, rgba(0, 0, 0, 0.55) 58%, transparent 100%);
+  filter: drop-shadow(0 0 12px rgba(98, 234, 255, 0.2));
+  opacity: 0.88;
+  animation: gridMove 8s linear infinite;
+}
+
+@keyframes gridMove {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 0 64px, 64px 0;
+  }
+}
+
+/* 4. 扫描线与暗角，只作用于背景层 */
+.cyber-backdrop::after {
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.12) 0,
+      rgba(255, 255, 255, 0.12) 1px,
+      transparent 1px,
+      transparent 4px
+    ),
+    radial-gradient(rgba(255, 255, 255, 0.07) 0.8px, transparent 1.2px),
+    linear-gradient(180deg, rgba(3, 8, 16, 0.02) 0%, rgba(3, 8, 16, 0.24) 54%, rgba(0, 0, 0, 0.76) 100%);
+  background-size: 100% 4px, 3px 3px, 100% 100%;
+  opacity: 0.74;
+  animation: crtFlicker 0.16s steps(2) infinite;
+}
+
+@keyframes glowPulse {
+  0% {
+    background-size: 112% 112%, 110% 110%, 128% 128%;
+    background-position: 16% 60%, 82% 23%, 50% 120%;
+    filter: saturate(0.92) brightness(0.9);
+    opacity: 0.88;
+  }
+  100% {
+    background-size: 132% 132%, 126% 126%, 156% 156%;
+    background-position: 12% 56%, 86% 26%, 50% 114%;
+    filter: saturate(1.18) brightness(1.08);
+    opacity: 1;
+  }
+}
+
+@keyframes crtFlicker {
+  0% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.78;
+  }
+  100% {
+    opacity: 0.72;
+  }
+}
