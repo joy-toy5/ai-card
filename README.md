@@ -18,15 +18,15 @@
 
 ## 界面展示
 
-<img width="2560" height="1320" alt="image" src="https://github.com/user-attachments/assets/666fe4e9-3a5b-455f-8f06-6c216367cac4" />
+<p><img width="2560" height="1320" alt="image" src="https://github.com/user-attachments/assets/666fe4e9-3a5b-455f-8f06-6c216367cac4" /></p>
 
-<img width="2560" height="1320" alt="image" src="https://github.com/user-attachments/assets/edce7003-29f7-4c66-9ca2-6d33b260170a" />
+<p><img width="2560" height="1320" alt="image" src="https://github.com/user-attachments/assets/edce7003-29f7-4c66-9ca2-6d33b260170a" /></p>
 
-<img width="2545" height="1319" alt="image" src="https://github.com/user-attachments/assets/44343c8c-e96d-4fd7-8b22-e90f0146efa9" />
+<p><img width="2545" height="1319" alt="image" src="https://github.com/user-attachments/assets/44343c8c-e96d-4fd7-8b22-e90f0146efa9" /></p>
 
-<img width="2545" height="1319" alt="image" src="https://github.com/user-attachments/assets/3079acf0-a718-4d92-b9fb-d88eb14d9a8b" />
+<p><img width="2545" height="1319" alt="image" src="https://github.com/user-attachments/assets/3079acf0-a718-4d92-b9fb-d88eb14d9a8b" /></p>
 
-<img width="2545" height="1319" alt="image" src="https://github.com/user-attachments/assets/b7ec40b2-bafc-4a75-9728-fbb451db665e" />
+<p><img width="2545" height="1319" alt="image" src="https://github.com/user-attachments/assets/b7ec40b2-bafc-4a75-9728-fbb451db665e" /></p>
 
 
 ## 快速开始
