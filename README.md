@@ -2,7 +2,7 @@
 
 一个基于 Vite + React 的卡牌展示示例项目。界面提供卡牌选择、归档预览、全量归档和 `PROMPT_ID` 搜索，适合作为交互原型、动画实验或提示词数据展示骨架。
 
--在线体验：https://ai-card.nkkwkk505.workers.dev/
+-在线体验：https://daw.qzz.io/
 
 ## 开源整理说明
 
